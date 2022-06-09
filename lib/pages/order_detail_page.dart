@@ -1,4 +1,4 @@
-import 'package:driver/model/order.dart';
+import 'package:driver/model/order_model.dart';
 import 'package:flutter/material.dart';
 
 class OrderDetailPage extends StatefulWidget {

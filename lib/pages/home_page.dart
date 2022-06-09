@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../model/order.dart';
+import '../model/order_model.dart';
 
 class HomePage extends StatefulWidget {
   final  ValueChanged<OrderModel> onJumpOrderDetail;
