@@ -1,30 +1,33 @@
-import 'package:driver/route/app_route_information_parser.dart';
-import 'package:driver/route/app_router_delegate.dart';
+import 'package:driver/pages/home_page.dart';
+import 'package:driver/routes/app_route_information_parser.dart';
+import 'package:driver/routes/app_router_delegate.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const App());
+  runApp(App());
 }
-class App extends StatefulWidget {
-  const App({Key? key}) : super(key: key);
 
+class Book {
+  final String title;
+  final String author;
+
+  Book(this.title, this.author);
+}
+
+class App extends StatefulWidget {
   @override
-  State<App> createState() => _AppState();
+  State<StatefulWidget> createState() => _AppState();
 }
 
 class _AppState extends State<App> {
+
   @override
   Widget build(BuildContext context) {
-    print('_BiliAppState:build');
-    //定义route
-    var widget = Router(
-      routeInformationParser: AppRouteInformationParser(),
+    return MaterialApp.router(
+      title: 'App title',
       routerDelegate: AppRouterDelegate(),
-      ///routeInformationParser为null时可缺省，routeInformation提供者
-      routeInformationProvider: PlatformRouteInformationProvider(
-          initialRouteInformation: const RouteInformation(location: '/')),
+      routeInformationParser: AppRouteInformationParser(),
     );
-    return MaterialApp(home: widget);
   }
 }
 

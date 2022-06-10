@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends Page {
+class LoginPage extends Page {
   @override
   Route createRoute(BuildContext context) {
     return MaterialPageRoute(
       settings: this,
       builder: (BuildContext context) {
-        return _HomePageState();
+        return _LoginPageState();
       },
     );
   }
 }
 
-class _HomePageState extends StatelessWidget {
+class _LoginPageState extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
       body: const Center(
-        child: Text("home page"),
+        child: Text("hello"),
       ),
     );
   }
